@@ -1,3 +1,5 @@
-import AuroraHero from "./HeroSection";
+import HeroSection from "./HeroSection";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-export { AuroraHero };
+export { HeroSection, Navbar, Footer };

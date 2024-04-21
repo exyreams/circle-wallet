@@ -17,7 +17,7 @@ import createAccount from "@/pages/createaccount";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
-const AuroraHero = () => {
+const HeroSection = () => {
   const color = useMotionValue(COLORS_TOP[0]);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const AuroraHero = () => {
       repeat: Infinity,
       repeatType: "mirror",
     });
-  }, []);
+  }, [color]);
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -41,17 +41,7 @@ const AuroraHero = () => {
       }}
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-4 text-gray-200"
     >
-      <div>
-        <Image
-          src={logo}
-          alt="logo"
-          style={{ objectFit: "contain" }}
-          width={200}
-          height={200}
-          className="absolute top-0 left-10 "
-        />
-      </div>
-      <div className="relative z-10 flex flex-col items-center p-20 mt-24">
+      <div className="relative z-10 flex flex-col items-center p-20 mt-20">
         <span className="mb-1.5 inline-block rounded-full bg-gray-600/50 px-3 py-1.5 text-md font-poppins">
           Fresh Release!
         </span>
@@ -104,47 +94,6 @@ const AuroraHero = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="mx-auto w-full max-w-4xl px-5 mt-80">
-        <div className="flex flex-col items-center bg-blue-600/20 rounded-md p-4 py-8">
-          <div className="text-center text-md font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
-            <a
-              href="#"
-              className="px-6 py-2 font-normal  font-poppins transition hover:text-[#acacaf]"
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="px-6 py-2 font-normal font-poppins transition hover:text-[#acacaf]"
-            >
-              Features
-            </a>
-            <a
-              href="#"
-              className="px-6 py-2 font-normal font-poppins transition hover:text-[#acacaf]"
-            >
-              Works
-            </a>
-            <a
-              href="#"
-              className="px-6 py-2 font-normal font-poppins transition hover:text-[#acacaf]"
-            >
-              Support
-            </a>
-            <a
-              href="#"
-              className="px-6 py-2 font-normal transition font-poppins hover:text-[#acacaf]"
-            >
-              Help
-            </a>
-          </div>
-          <div className="mb-8 mt-8 w-48 border-b  border-solid border-b-white"></div>
-          <p className="text-sm text-white font-poppins">
-            © Copyright 2024. All rights reserved.
-          </p>
-        </div>
-      </div>
       <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={50} count={2500} factor={4} fade speed={2} />
@@ -154,4 +103,4 @@ const AuroraHero = () => {
   );
 };
 
-export default AuroraHero;
+export default HeroSection;

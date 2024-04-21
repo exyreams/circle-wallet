@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: "#131032",
         secondary: "#041239",
-        "neon-blue": "#ffcc05",
+        accent: "#10a47f",
       },
       boxShadow: {
         "blue-shadow": "0 0px 200px -100px rgba(52,108,249,1)",

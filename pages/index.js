@@ -1,10 +1,12 @@
-import { AuroraHero, Footer } from "@/components";
+import { Navbar, Hero, Footer, HeroSection } from "@/components";
 
 const Home = () => {
   return (
-    <div>
-      <AuroraHero />
-    </div>
+    <>
+      <HeroSection />
+      <Navbar />
+      <Footer />
+    </>
   );
 };
 
