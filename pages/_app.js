@@ -3,9 +3,10 @@
 import Head from "next/head";
 
 import "../styles/globals.css";
+import { Background, Navbar, Footer } from "@/components";
 
 const Emporiums = ({ Component, pageProps }) => (
-  <div>
+  <>
     <Head>
       <link rel="icon" type="image/ico" href="/favicon.ico" />
       <link
@@ -38,10 +39,14 @@ const Emporiums = ({ Component, pageProps }) => (
       <link rel="manifest" href="/site.webmanifest" />
       <title>Circle Wallet</title>
     </Head>
-    <div>
-      <Component {...pageProps} />
-    </div>
-  </div>
+    <Background>
+      <Navbar />
+      <div className="pt-65 z-10">
+        <Component {...pageProps} />
+      </div>
+      <Footer />
+    </Background>
+  </>
 );
 
 export default Emporiums;
