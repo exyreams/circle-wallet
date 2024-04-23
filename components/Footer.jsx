@@ -6,31 +6,31 @@ const Footer = () => {
           <div className="text-center text-md font-semibold text-white">
             <a
               href="#"
-              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2 hover:uppercase"
+              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2"
             >
               About
             </a>
             <a
               href="#"
-              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2 hover:uppercase"
+              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2"
             >
               Features
             </a>
             <a
               href="#"
-              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2 hover:uppercase"
+              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2"
             >
               Works
             </a>
             <a
               href="#"
-              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2 hover:uppercase"
+              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2"
             >
               Support
             </a>
             <a
               href="#"
-              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2 hover:uppercase"
+              className="px-6 py-2 font-poppins transition cursor-pointer hover:underline underline-offset-2"
             >
               Help
             </a>

@@ -1,5 +1,6 @@
 import { W3SSdk } from "@circle-fin/w3s-pw-web-sdk";
 import React, { useCallback, useEffect, useState } from "react";
+import { IoIosArrowBack } from "react-icons/io";
 
 import { Button } from "@/components";
 
@@ -105,55 +106,55 @@ const Createaccount = () => {
   }, [appId, challengeId, encryptionKey, userToken]);
 
   return (
-    <div>
-      <div className="p-10">
-        Advanced Mode
+    <div className="relative flex flex-col justify-center items-center">
+      <div className="bg-[#292929]/80 p-12 rounded-lg">
+        <h1 className="pb-2 font-poppins text-3xl font-bold">Advanced Mode</h1>
         <br />
-        <br />
-        <div className="row">
-          <div className="label">App Id</div>
-
+        <div className="pb-2 font-poppins">
+          <div className="">App Id</div>
           <input
             placeholder="Enter your AppID"
-            class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
+            class="bg-[#292929]/75 border-2 border-[#3e3e3e] rounded-lg w-full text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
             type="text"
             onChange={onAppIdChange}
             value={appId}
           />
         </div>
-        <div className="row">
-          <div className="label">User Token</div>
+        <div className="pb-2 font-poppins">
+          <div className="">User Token</div>
           <input
             placeholder="Enter User Token"
-            class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
+            class="bg-[#292929]/75 border-2 border-[#3e3e3e] w-full rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
             type="text"
             onChange={onUserTokenChange}
             value={userToken}
           />
         </div>
-        <div className="row">
-          <div className="label">Encryption Key</div>
+        <div className="pb-2 font-poppins">
+          <div className="">Encryption Key</div>
           <input
             placeholder="Enter Encryption Key"
-            class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
+            class="bg-[#292929]/75 border-2 border-[#3e3e3e] w-full rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
             type="text"
             onChange={onEncryptionKeyChange}
             value={encryptionKey}
           />
         </div>
-        <div className="row">
+        <div className="pb-2 font-poppins">
           <label className="label">Challenge Id</label>
           <br />
           <input
             placeholder="Enter Challenge Id"
-            class="bg-[#292929] border-2 border-[#3e3e3e] rounded-lg text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
+            class="bg-[#292929]/75 border-2 border-[#3e3e3e] rounded-lg w-full text-white px-6 py-3 text-base hover:border-[#fff] cursor-pointer transition"
             type="text"
             onChange={onChallengeIdChange}
             value={challengeId}
           />
         </div>
         <br />
-        <Button name="Verify Challenge" />
+        <div className="flex justify-center pb-2">
+          <Button name="Verify Challenge" onClick={onSubmit} />
+        </div>
       </div>
     </div>
   );
