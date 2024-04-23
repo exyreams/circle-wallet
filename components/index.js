@@ -1,5 +1,7 @@
-import HeroSection from "./HeroSection";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Button from "./Button";
+import Background from "./Background";
 
-export { HeroSection, Navbar, Footer };
+
+export { Background, Button, Footer, Navbar };
